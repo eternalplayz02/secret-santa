@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Melia</title>
+
+<style>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Georgia", serif;
+  background: #fdfbf7;
+  color: #2d4a3e;
+  line-height: 1.7;
+}
+
+/* ---------- GLOBAL ---------- */
+section {
+  padding: 8vw;
+}
+
+.section-title {
+  font-size: clamp(2.2rem, 5vw, 3.5rem);
+  font-weight: 300;
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+/* ---------- HERO ---------- */
+.hero {
+  min-height: 100vh;
+  padding: 6vw;
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  gap: 5vw;
+  align-items: center;
+  background: linear-gradient(135deg, #a8d5ba, #e8f5e9, #fef9e7);
+}
+
+.hero-text h1 {
+  font-size: clamp(3rem, 7vw, 5.5rem);
+  font-weight: 300;
+  letter-spacing: 0.05em;
+}
+
+.hero-text p {
+  margin-top: 1.5rem;
+  font-style: italic;
+  font-size: 1.4rem;
+  color: #5a7a6a;
+  max-width: 480px;
+}
+
+.hero-collage {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+}
+
+.hero-collage img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 24px;
+}
+
+.hero-collage img.tall {
+  grid-row: span 2;
+  border-radius: 40px;
+}
+
+/* ---------- ESSENCE ---------- */
+.essence {
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  gap: 5vw;
+  align-items: center;
+}
+
+.essence-text p {
+  font-size: 1.25rem;
+  color: #5a7a6a;
+  margin-bottom: 1.2rem;
+}
+
+/* Image collage */
+.image-stack {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+}
+
+.image-stack img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 20px;
+}
+
+.image-stack img.tall {
+  grid-row: span 2;
+  border-radius: 40px;
+}
+
+/* ---------- VALUES ---------- */
+.values {
+  background: #f0f7f4;
+}
+
+.value-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 2.5rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.value-card {
+  background: white;
+  padding: 2.5rem;
+  border-radius: 28px;
+  box-shadow: 0 8px 30px rgba(0,0,0,0.08);
+}
+
+.value-card h3 {
+  font-size: 1.6rem;
+  margin-bottom: 0.8rem;
+}
+
+.value-card p {
+  color: #5a7a6a;
+}
+
+/* ---------- MOMENTS (CENTERED MOOD BOARD) ---------- */
+.moments-wrapper {
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.mood-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-auto-rows: 220px;
+  gap: 1.5rem;
+}
+
+.mood-grid img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 22px;
+}
+
+.wide { grid-column: span 3; }
+.tall { grid-row: span 2; }
+.large {
+  grid-column: span 4;
+  grid-row: span 2;
+}
+
+/* ---------- REFLECTION ---------- */
+.reflection {
+  background: #eef5f1;
+  text-align: center;
+}
+
+.reflection p {
+  max-width: 850px;
+  margin: 0 auto;
+  font-size: 1.25rem;
+  color: #4f6b5e;
+}
+
+/* ---------- ASPIRATION ---------- */
+.aspiration {
+  background: linear-gradient(135deg, #f0f7f4, #fef9e7);
+}
+
+.aspiration-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  margin-top: 3rem;
+}
+
+.aspiration-grid img {
+  width: 100%;
+  height: 320px;
+  object-fit: cover;
+  border-radius: 30px;
+}
+
+.aspiration p {
+  max-width: 850px;
+  margin: 3rem auto 0;
+  font-size: 1.3rem;
+  text-align: center;
+  color: #5a7a6a;
+}
+
+/* ---------- RESPONSIVE ---------- */
+@media (max-width: 900px) {
+  .hero {
+    grid-template-columns: 1fr;
+  }
+
+  .essence {
+    grid-template-columns: 1fr;
+  }
+
+  .mood-grid {
+    grid-template-columns: repeat(2, 1fr);
+    grid-auto-rows: 200px;
+  }
+
+  .wide, .large {
+    grid-column: span 2;
+  }
+
+  .aspiration-grid {
+    grid-template-columns: 1fr;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-text">
+    <h1>Melia</h1>
+    <p>
+      Fairy Druid · Protector of Small Lives · Steady Friend
+    </p>
+  </div>
+
+  <div class="hero-collage">
+    <img class="tall" src="outdoors.jpg">
+    <img src="acorn.jpg">
+    <img src="tiara.jpg">
+  </div>
+</section>
+
+<!-- ESSENCE -->
+<section class="essence">
+  <div class="image-stack">
+    <img class="tall" src="outnight.jpg">
+    <img src="books.jpg">
+    <img src="flaws.jpg">
+  </div>
+
+  <div class="essence-text">
+    <h2 class="section-title">Gentle, by Choice</h2>
+    <p>Melia believes kindness is not weakness. It is a choice made every day.</p>
+    <p>Animals trust her instinctively. Forest paths seem to open where she walks.</p>
+    <p>She listens first, acts with care, and protects without needing to control.</p>
+  </div>
+</section>
+
+<!-- VALUES -->
+<section class="values">
+  <h2 class="section-title">What She Holds Close</h2>
+  <div class="value-grid">
+    <div class="value-card">
+      <h3>Healing</h3>
+      <p>Restoration takes patience. She believes mending is as powerful as fighting.</p>
+    </div>
+    <div class="value-card">
+      <h3>Connection</h3>
+      <p>Friendship is built by honesty, staying present, and choosing to listen.</p>
+    </div>
+    <div class="value-card">
+      <h3>Wonder</h3>
+      <p>Joy lives in rain on leaves, shared laughter, and quiet understanding.</p>
+    </div>
+  </div>
+</section>
+
+<!-- MOMENTS -->
+<section>
+  <h2 class="section-title">Moments That Stay</h2>
+  <div class="moments-wrapper">
+    <div class="mood-grid">
+      <img class="large" src="theo.png">
+      <img class="tall" src="observatory.jpg">
+      <img class="wide" src="cafe.jpg">
+      <img src="rain.jpg">
+      <img src="fairies.jpg">
+    </div>
+  </div>
+</section>
+
+<!-- REFLECTION -->
+<section class="reflection">
+  <h2 class="section-title">Roots That Hold</h2>
+  <p>
+    Not every part of her journey was easy. But each challenge taught her how to speak honestly, how to listen better, and how to stay open without losing herself. Those lessons did not harden her—they grounded her.
+  </p>
+</section>
+
+<!-- ASPIRATION -->
+<section class="aspiration">
+  <h2 class="section-title">Looking Forward</h2>
+
+  <div class="aspiration-grid">
+    <img src="dress.jpg">
+    <img src="forestgirl.jpg">
+    <img src="necklace.jpg">
+  </div>
+
+  <p>
+    Melia dreams of becoming a Magical Animal Conservationist—creating safe spaces for injured creatures, protecting fragile ecosystems, and proving that care, patience, and courage can exist together.
+  </p>
+</section>
+
+</body>
+</html>
